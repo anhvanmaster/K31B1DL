@@ -1,12 +1,10 @@
 // Bài 1:
 alert(`Nhập một số và tìm bội số của nó trong khoảng từ 1-15.`);
 var a = prompt('Nhập số a:');
-a = parseInt(a);
-document.writeln(`Bài 1:<br> Bội số của a trong khoảng từ 1-15 là: `)
-for (var i = 1; i < 15; i++) {
-	if (i%a==0) {
-		document.write(`${i}, `);
-	}
+// a = parseInt(a);
+document.writeln(`Bài 1:<br> Bội số của a với các số trong khoảng từ 1-15 là: <br>`)
+for (var i = 1; i <= 15; i++) {
+	document.write(`${a} x ${i} = ${i*a} <br>`);
 }
 document.write('<br>');
 // Bài 2
