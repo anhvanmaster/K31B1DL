@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+	padding:  0;
+}
+.container {
+	width: 960px;
+	margin: auto;
+}
+.clearfix:after, .clearfix:before {
+	clear: both;
+	content: " ";
+	display: block;
+}
+/*
+	BEGIN HEADER
+*/
+header:first-child {
+	margin-top:  10px;
+}
+.logo {
+	float: left;
+	width: 207px;
+}
+.search-bar {
+	position: relative;
+	display: inline-block;
+	width: 400px;
+	text-align: center;
+	margin-top: 10px;
+}
+.search-bar>input {
+	width: 300px;
+	height: 35px;
+	line-height: 30px;
+	border-radius: 10px;
+	padding-left: 10px;
+	border: 1px solid #ccc;
+}
+.search-bar>input:focus {
+	outline: none;
+	border: 1px solid lightblue;
+}
+.search-bar>button {
+	outline: none;
+	position: absolute;
+	top: 2px;
+	right: 44px;
+	width: 40px;
+	bottom: 40px;
+	border: none;
+	cursor: pointer;
+}
+.search-bar>button:active {
+	outline: none;
+}
+.user {
+	display: inline-table;
+	width: 300px;
+	margin-top: 5px;
+	float: right;
+}
+.user .user-sub {
+	display: inline-block;
+	padding: 0px 9px;
+	text-align: center;
+	border-right: 1px dashed #ccc;
+}
+.user .user-sub:last-child {
+	display: inline-block;
+	padding: 0px 9px;
+	text-align: center;
+	border-right: none;
+}
+.user .user-sub a {
+	display: block;
+	color: grey;
+	text-decoration: none;
+}
+.user .user-sub a:hover {
+	color: #81CBED;
+	text-decoration: none;
+}
+
+/* 
+	END HEADER
+*/

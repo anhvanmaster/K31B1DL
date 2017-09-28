@@ -1,0 +1,5 @@
+inline style luôn có độ ưu tiên lớn nhất
+external và internal độ ưu tiên thằng nào viết sau thì ưu tiên hơn
+display:
+-block
+-inline.

@@ -1,0 +1,53 @@
+p {
+	font-weight: bold;
+}
+.block {
+	display:  block;
+}
+.inline {
+	display: inline;
+}
+.logo {
+	width: 20%;
+	
+	display: inline-block;
+}
+.logo img {
+	width: 100%;
+	height: 100%;
+}
+nav {
+	background: yellow;
+	width: 79%;
+	font-size: 100px;
+	display: inline-block;
+}
+slide {
+	display: block;
+	width: 100%;
+	height: 90px;
+}
+slide .one {
+	width: 24%;
+	height: 100%;
+	display: inline-block;
+	background: red;
+}
+slide .two {
+	width: 25%;
+	height: 100%;
+	background: red;
+	display: inline-block;
+}
+slide .three {
+	width: 25%;
+	height: 100%;
+	background: red;
+	display: inline-block;
+}
+slide .four {
+	width: 25%;
+	height: 100%;
+	background: red;
+	display: inline-block;
+}

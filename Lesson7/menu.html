@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>menu</title>
+	<link rel="stylesheet" href="public/plugin/font-awesome/css/font-awesome.min.css">
+	<style type="text/css" media="screen">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		nav {
+			background: #2ca9e1;
+		}
+		nav ul {
+				list-style: none;
+				list-style-type: none;
+				height: 45px;
+				line-height: 45px;
+				display: block;
+				width: 960px;
+				margin: auto;
+		}
+		nav ul li {
+			display: block;
+			float: left;
+			min-width: 80px;
+			text-align: center;
+			border-right: 1px dashed #ccc;
+			position: relative;
+		}
+		nav ul li:last-child {
+			border-right: none;
+		}
+		nav ul li:hover {
+			background-color: #B6E6F5;
+		}
+		nav ul li a {
+			display: block;
+			color: #fff;
+			padding: 0 10px;
+			text-decoration: none;
+		}
+		nav ul li ul.dropdown {
+			display: none;
+			position: absolute;
+			width: 90px;
+			background: #2ca9e1;
+		}
+		nav ul li:hover ul.dropdown {
+			display: block;
+		}
+		nav ul li ul.dropdown li {
+			background: #2ca9e1;
+			display: block;
+			border: none;
+		}
+		nav ul li ul.dropdown li:hover {
+			background: lightblue;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li>
+				<a href="#"><i class="fa fa-home" aria-hidden="true"></i> menu1</a>
+				<ul class="dropdown">
+					<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> menu1</a></li>
+					<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> menu1</a></li>
+					<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> menu1</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i> menu2</a>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-registered" aria-hidden="true"></i> menu3</a>
+			</li>
+			<li>
+				<a href="#">menu4</a>
+			</li>
+		</ul>
+	</nav>
+</body>
+</html>

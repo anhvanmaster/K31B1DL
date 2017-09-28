@@ -1,0 +1,23 @@
+.bg-blue, .bg-green, .bg-yellow {
+	width: 300px;
+	border: 1px solid;
+}
+.bg-blue {
+	background-color: blue;
+	/* height: 500px; */
+}
+.bg-green {
+	background-color: green;
+}
+.bg-yellow {
+	background-color: yellow;
+}
+.flex {
+	display: inline-flex;
+}
+.table {
+	display: table;
+}
+.table-cell {
+	display: table-cell;
+}

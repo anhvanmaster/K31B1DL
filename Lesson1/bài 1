@@ -1,0 +1,21 @@
+I. Phần đầu (head):
+
+II. Phần thân (body):
+- có 7 loại thẻ định dạng:
++text
++list
++table
++media
++area
++form
++hyper link
+
+1. Text:
+a) thẻ block (thẻ khối):
+-thẻ <p>
+-các thẻ <h>
+b) các thẻ inline(trên một dòng):
+-strong, strike,...
+bài tập: tìm hiểu các thẻ html định dạng chữ
+tên lớp_tên họ đệm_lessonX
+deadline: 23h59' 20/8/2017

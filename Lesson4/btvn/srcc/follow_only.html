@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- saved from url=(0143)https://sp.zalo.me/plugins/follow_only?oaid=735646604822931697&style=blue&customize=false&callback=null&id=9d23c4ed-eea7-4c4c-81c7-7b81cdc43387 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Zalo</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="description here">
+    <meta name="format-detection" content="telephone=no">
+    <script src="./sdk-server-1.0.2.js.tải xuống"></script>
+    <style>
+      body{font-family:arial;}
+      .zb-btn-white--small{display:inline-block;background-color:#fff;color:#03a5fa;width:87px;height:20px;line-height:20px;text-decoration:none;font-size:11px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;text-align:center;}
+      .zb-btn-white--small:hover{opacity:0.85;}
+      .zb-btn-white--small .zb-logo-zalo{display:inline-block;vertical-align:middle;margin-bottom:0.15em;margin-right:4px;width:14px;height:14px;background:url(/static/follow/images/logo_blue_s.png);}
+      @media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi) { 
+        .zb-btn-white--small .zb-logo-zalo{background:url(/static/follow/images/logo_blue_s_2x.png);-webkit-background-size:14px 14px;background-size:14px 14px;}
+      }
+      .zb-btn-white--large{display:inline-block;width:40px;}
+      .zb-btn-white--large:hover{opacity:0.85;}
+      .zb-btn-white--large .zb-logo-zalo{display:block;width:40px;height:40px;background:url(/static/follow/images/logo_white_l.jpg);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin-bottom:1px;}
+      @media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi) { 
+        .zb-btn-white--large .zb-logo-zalo{background:url(/static/follow/images/logo_white_l_2x.jpg);-webkit-background-size:40px 40px;background-size:40px 40px;}
+      }
+      .zb-btn-white--large span{display:inline-block;font-style:normal;width:40px;height:17px;line-height:18px;margin-top:0;background-color:#fff;color:#03a5fa;font-size:9px;text-decoration:none;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;text-align:center;}
+      .zb-btn-blue--small{display:inline-block;background-color:#03a5fa;color:#fff;width:87px;height:20px;line-height:20px;text-decoration:none;font-size:11px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;text-align:center;}
+      .zb-btn-blue--small:hover{opacity:0.85;}
+      .zb-btn-blue--small .zb-logo-zalo{display:inline-block;vertical-align:middle;margin-bottom:0.15em;margin-right:4px;width:14px;height:14px;background:url(/static/follow/images/logo_white_s.png);}
+      @media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi) { 
+        .zb-btn-blue--small .zb-logo-zalo{background:url(/static/follow/images/logo_white_s_2x.png);-webkit-background-size:14px 14px;background-size:14px 14px;}
+      }
+      .zb-btn-blue--large{display:inline-block;width:40px;}
+      .zb-btn-blue--large:hover{opacity:0.85;}
+      .zb-btn-blue--large .zb-logo-zalo{display:block;width:40px;height:40px;background:url(/static/follow/images/logo_blue_l.jpg);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin-bottom:1px;}
+      @media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi) { 
+        .zb-btn-blue--large .zb-logo-zalo{background:url(/static/follow/images/logo_blue_l_2x.jpg);-webkit-background-size:40px 40px;background-size:40px 40px;}
+      }
+      .zb-btn-blue--large span{display:inline-block;font-style:normal;width:40px;height:18px;line-height:18px;margin-top:0;background-color:#fff;color:#8d8d8d;font-size:9px;text-decoration:none;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;text-align:center;border:#c1c1c1 solid 1px;box-sizing:border-box;}
+
+    </style>
+  </head>
+  <body>
+        
+        
+        <span onclick="followNow()"><a href="https://sp.zalo.me/plugins/follow_only?oaid=735646604822931697&amp;style=blue&amp;customize=false&amp;callback=null&amp;id=9d23c4ed-eea7-4c4c-81c7-7b81cdc43387#!" class="zb-btn-blue--small"><i class="zb-logo-zalo"></i><span id="follow">Quan tâm</span></a></span>
+        
+      
+    <script>
+    var oaid = '735646604822931697';
+    var followFlg = '-7';
+    var ISLOGGED = '';
+    var OAUTH_DOMAIN = 'https://id.zalo.me';
+    var logged = '';
+    var zShareTimer = null;
+    var atk = 'aROcQiOAG42I_oLenK90GPl-9cqqE3XdYLGTnmv1G0';
+
+    function followNow() {
+        var node = document.getElementById("follow").innerHTML;
+        if ("logged" === logged || "Đăng nhập" === node) {
+            var continueUrl= encodeURIComponent("https://id.zalo.me/account/?display=popup&auto_close=true");
+            openInPopup(OAUTH_DOMAIN + "/account?continue=" + continueUrl, "Zalo Login", 500, 600);
+        } else {
+            ZSDKServer.getAPI("https://sp.zalo.me/l/share?action=5&referrer=" + encodeURIComponent(document.referrer), function (resp) {
+                
+            });
+            ZSDKServer.getAPI("https://sp.zalo.me/ajax?action=9&oaid=" + oaid + "&t=" + atk, function (resp) {
+                var data = JSON.parse(resp);
+                if (data.isLogged === 'logged') {
+                    followLogged(data);
+                } else {
+                    followNotLogged(data);
+                }
+            });
+        }
+    }
+    
+    function followLogged(resp) {
+        followFlg = resp.followFlg;
+        var node = document.getElementById("follow");
+        node.innerText = followFlg < 0 ? "Quan tâm" : "Đã quan tâm";
+        ZSDKServer.postMessage("follow_success", {
+            id: '9d23c4ed-eea7-4c4c-81c7-7b81cdc43387'
+        });
+    }
+
+    function followNotLogged() {
+        var node = document.getElementById("follow");
+                node.innerText = "Đăng nhập" ;
+    }
+    
+    function openInPopup(url, title, width, height) {
+        var newWindow = popupCenter(url, title, width, height);
+
+        //listen if window closed
+        if (zShareTimer !== null) {
+            clearInterval(zShareTimer);
+        }
+        zShareTimer = setInterval(function(){   
+            if (newWindow.closed) {  
+                clearInterval(zShareTimer);
+                zShareTimer = null;
+                
+                location.reload();
+            }  
+        }, 1000); 
+    }
+    
+    function popupCenter(url, title, w, h) {
+        var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+        var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+        var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+        var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+        var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+        var top = ((height / 2) - (h / 2)) + dualScreenTop;
+        var newWindow = window.open(url, title, 'directories=0,titlebar=0,toolbar=0,location=0,status=0,menubar=0,scrollbars=0,resizable=0,width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+
+        if (window.focus) {
+            newWindow.focus();
+        }
+        return newWindow;
+    }
+    
+    window.onload = function () {
+        ZSDKServer.init();
+
+        ZSDKServer.subscribe("zfollowonly_reload", function () {
+            window.location.reload();
+        });
+
+        ZSDKServer.subscribe("zfollowonly_follow", function () {
+            followNow();
+        });
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length == 2) return parts.pop().split(";").shift();
+          }
+        ZSDKServer.subscribe("inapp_cookie", function (data) {
+            var znid = getCookie('znid');
+            if (znid == null || znid == '') {
+                var days = 1;
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime()+(days*24*60*60*1000));
+                    var expires = "; expires="+date.toGMTString();
+                }
+                else var expires = "";
+                document.cookie = "znid="+data.data+expires+"; path=/";
+                window.location.reload();
+            }
+        });
+
+    };
+    
+    </script>
+  
+</body></html>

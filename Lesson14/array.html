@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>mảng</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		// var arr = [081,68862,53,489,5,6,647,8,669,176,2,3,487,5,096,764,80,9];
+		
+		// // console.log(arr);
+		// // arr[0]++;
+		// // arr[1]++;
+		// // arr[3]=0;
+		// // arr[4]=0;
+		// // arr[6][0]++;
+		// // arr[6][1]++;
+		// // arr[6][2]++;
+		// // arr[6][3]++;
+		// // console.log(arr);
+		for (var i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 == 0) {
+				console.log(`số ${arr[i]} là số chẵn`);
+			} else {
+				console.log(`số ${arr[i]} là số lẻ`);
+			}
+		}
+		var arr = [1,2,3,4,5,6,7,8,9,10];
+		for (var i = 0; i < arr.length; i++) {
+			for (var n = i; n < arr.length; n++) {
+				if (arr[i]+arr[n]==10 && i!=n) {
+					console.log(`${arr[i]} + ${arr[n]} = 10`);
+				}
+			}
+		}
+
+	</script>
+</body>
+</html>

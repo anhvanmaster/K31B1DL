@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		// khai báo
+		var a = prompt("Nhập số a:");
+		a = parseInt(a);
+		var b = prompt("Nhập số b:");
+		b = parseInt(b);
+		var c = prompt("Nhập số c:");
+		c = parseInt(c);
+		
+		var p = (a+b+c)/2;
+		var delta = Math.pow(b,2)-4*a*c;
+
+		// bài 1: tam giác
+		if ((a+b>c || a+c>b || b+c>a) && (a>0 && b>0 && c>0)) {
+			console.log("Đây là 3 cạnh của tam giác!");
+			console.log("Chu vi: " + p*2);
+			console.log("Diện tích: " + Math.sqrt(p*(p-a)*(p-b)*(p-c)));
+		} else {
+			console.log("Đây không phải 3 cạnh của tam giác!");
+		}
+
+		// bài 2: pt bậc 2
+		if (delta<0) {
+			console.log("Phương trình vô nghiệm!");
+		} else if (delta==0) {
+			console.log("Phương trình có nghiệm kép là: " + -b/2*a);
+		} else if (delta>0) {
+			console.log("x1=" + (-b+Math.sqrt(delta))/2*a);
+			console.log("x2=" + (-b-Math.sqrt(delta))/2*a);
+		}
+
+	</script>
+</body>
+</html>
