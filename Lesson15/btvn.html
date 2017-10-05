@@ -13,14 +13,8 @@
 		for (var i = 0; i < a.length; i++) {
 			re[a[i]]=0;
 		}
-		for (var i = 0; i < a.length; i++) {
-			if (re[a[i]] == 0) {
-				for (var j = i; j < a.length; j++) {
-					if (a[i]==a[j]) {
-						re[a[i]]++;
-					}
-				}
-			}
+		for (var i = 0; i <= a.length; i++) {
+			re[a[i]]++;
 		}
 		console.log(re);
 		for (var i = 0; i <= re.length; i++) {
