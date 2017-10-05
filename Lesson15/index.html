@@ -9,15 +9,32 @@
 <body>
 	<script>
 		var a = [45,34,1,34,7,4,7,4,4,65,345,65,99,69,96];
-		var max = 0;
+		var re = [];
+		var d=0;
+		for (var i = 0; i < a.length; i++) {
+			re[a[i]]=0;
+		}
+		console.log(re);
+		// var max = 0;
+		// var re = [];
+		// var re[0] =0, re[1]=0;
+		// for (var i = 0; i <= a.length; i++) {
+		// 	for (var j = 0; j <= a.length; j++) {
+		// 		if(a[i]!=a[j] && a[i]+a[j]>= re[0]+re[1]){
+		// 			re[0]=a[i];
+		// 			re[1]=a[j];
+		// 		}
+		// 	}
+		// }
+		// document.write(`${re[0]} + ${re[1]} = ${re[0]+re[1]}`);
 		for (var i = 0; i <= a.length; i++) {
-			for (var j = 0; j <= a.length; j++) {
-				if(a[i]!=a[j] && a[i]+a[j]>=max){
-					max=a[i]+a[j];
+			for (var j = i+1; j <= a.length; j++) {
+				if (a[i]==a[j]) {
+					re[a[i]]++;
 				}
 			}
 		}
-		document.write(max);
+		console.log(re);
 	</script>
 </body>
 </html>
