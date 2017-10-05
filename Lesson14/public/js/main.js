@@ -31,3 +31,4 @@ for (var i = 2; i <= 9; i++) {
 	}
 	document.write('<br>');
 }
+consolo.log('kkkk');

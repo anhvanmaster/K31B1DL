@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript" charset="utf-8">
+		var a =prompt("nhap a:", '');
+		a = parseFloat(a);
+		
+
+		for (var i = 1; i <=15; i++) {
+			var u = i;
+			var A=a;
+			var c = A*u;
+			var t = u%A;
+
+			while (t!=0) {
+				t = A%u;
+				A=u;
+				u=t;
+			}
+			document.write(c);
+			c = c/A;
+			document.write(`boi chung nho nhat cua ${a} va ${i} la ${c} <br>`);
+		}
+	</script>
+</body>
+</html>
