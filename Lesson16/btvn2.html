@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var d = 0;
+		var a = [];
+		while (d<20) {
+			var ran = Math.floor(Math.random() * (1000-100))+100;
+			a[d] = ran;
+			d++;
+		}
+		console.log(a);
+		for (var i = 0; i < a.length; i++) {
+			for (var j = 0; j < a.length; j++) {
+				for (var n = 0; n < a.length; n++) {
+					var b = a[i], c = a[j], d = a[n];
+					if (b+c>d && b+d>c && c+d>b) {
+						var p = (b+c+d)/2;
+						document.write(`Ba số ${b}, ${c}, ${d} là ba cạnh của một tam giác có:<br>
+							chu vi: ${p*2}<br>
+							diện tích: ${Math.sqrt(p*(p-b)*(p-c)*(p-d))}<br>
+						`)
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>
