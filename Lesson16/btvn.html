@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>btvn</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var d = 0;
+		var a = [];
+		var memo = [];
+		while (d<20) {
+			var ran = Math.floor(Math.random() * (1000-100))+100;
+			a[d] = ran;
+			d++;
+		}
+		
+		function tamGiac(a, b, c) { // tính chu vi, diện tích
+			if (a+b>c && a+c>b && b+c>a) {
+				var p = (a+b+c)/2;
+				document.write(`<div style="border: 1px solid #ccc">
+					Ba số ${a}, ${b}, ${c} là cạnh của một tam giác có <br> 
+					Chu vi: ${p*2} <br>
+					Diện tích: ${Math.sqrt(p*(p-a)*(p-b)*(p-c))}
+				</div>
+				`);
+			} else {
+				document.write(`<div style="border: 1px solid #ccc">
+					Ba số ${a}, ${b}, ${c} không phải 3 cạnh của tam giác <br>
+				</div>
+				`);
+			}
+		}
+
+		function thu(n) { // liệt kê chỉnh hợp lặp
+			for (var i = 0; i < a.length; i++) {
+				memo[n] = a[i];
+				if (n==2) {
+					tamGiac(memo[0],memo[1],memo[2]);
+				} else {	
+					thu(n+1);
+				}
+			}
+		}
+		thu(0);
+	</script>
+</body>
+</html>

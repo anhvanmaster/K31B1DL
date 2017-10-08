@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		//.6
+		// var d =0;
+		// var re =[];
+		// for (var i = 0; i <= 1000; i++) {
+		// 	var ran = Math.floor(Math.random()*1000) +1;
+		// 	if (ran % 3 ==0 && ran % 4==0) {
+		// 		re[d]=ran;
+		// 		d++;
+		// 	}
+		// }
+		// for (var i = 0; i < re.length; i++) {
+		// 	document.write(`${re[i]} <br>`);
+		// }
+		//while do, do while
+		// var d =0;
+		// while(d<=1000){
+		// 	var ran = Math.floor(Math.random()*1000) +1;
+		// 	if (ran  % 3 == 0 && ran % 7 == 0) {
+		// 		document.write(`so ${ran} chia het cho 3 va 4 <br>`);
+		// 		d++;
+		// 	}
+		// }
+		//.8
+		var d =0;
+		var arr = [];
+		var data = [];
+		while(d<=100){
+			var ran = Math.floor(Math.random()*10000) +1;
+			if (ran  % 3 == 0 && ran % 7 == 0) {
+				if (data[ran]==1) {continue;}
+				else {
+					arr[d] = ran;
+					data[ran]=1;
+					d++;
+				}
+			}
+		}
+		for (var i = 0; i < arr.length; i++) {
+			document.write(arr[i]+ "<br>");
+		}
+	</script>
+</body>
+</html>
