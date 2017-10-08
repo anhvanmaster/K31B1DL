@@ -20,16 +20,16 @@
 		function tamGiac(a, b, c) { // tính chu vi, diện tích
 			if (a+b>c && a+c>b && b+c>a) {
 				var p = (a+b+c)/2;
-				document.write(`<div style="border: 1px solid #ccc">
+				document.write(`<div style="border: 1px solid #ccc; display: inline-block;">
 					Ba số ${a}, ${b}, ${c} là cạnh của một tam giác có <br> 
 					Chu vi: ${p*2} <br>
 					Diện tích: ${Math.sqrt(p*(p-a)*(p-b)*(p-c))}
-				</div>
+				</div><br>
 				`);
 			} else {
-				document.write(`<div style="border: 1px solid #ccc">
+				document.write(`<div style="border: 1px solid #ccc; display: inline-block;">
 					Ba số ${a}, ${b}, ${c} không phải 3 cạnh của tam giác <br>
-				</div>
+				</div><br>
 				`);
 			}
 		}
