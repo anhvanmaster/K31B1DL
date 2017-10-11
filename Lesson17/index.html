@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>function</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- <input type="text" name="" id="yourName" onkeydown="writeYourName()">
+	<h3 id="target">0</h3>
+	<button onclick="cong()">click +</button>
+	<button onclick="tru()">click -</button>
+	<script>
+		var d = 0;
+		function cong() {
+			d++;
+			document.getElementById('target').innerText = d;
+		}
+		function tru() {
+			d--;
+			document.getElementById('target').innerText = d;
+		}
+		function writeYourName() {
+			console.log(document.getElementById('yourname').value);
+		}
+	</script> -->
+
+
+	<input type="text" id="numberA" onkeyup="tinhTong()">
+	<input type="text" id="numberB" onkeyup="tinhTong()">
+	<input type="text" id="numberC" onkeyup="tinhTong()">
+	<h3 id="result">0</h3>
+	<script>
+		
+		// debugger;
+		function tinhTong() {
+			var a = parseInt(document.getElementById('numberA').value);
+			a = isNaN(a) == true ? 0 : a;
+			var b = parseInt(document.getElementById('numberB').value);
+			b = isNaN(b) == true ? 0 : b;
+			var c = parseInt(document.getElementById('numberC').value);
+			c = isNaN(c) == true ? 0 : c;
+			document.getElementById('result').innerText = a+b+c;
+		}
+	</script>
+</body>
+</html>
