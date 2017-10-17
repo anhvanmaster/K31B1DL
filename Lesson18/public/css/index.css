@@ -1,0 +1,50 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+button, h1, p, b{
+	font-size: 25px;
+}
+.container{
+	width: 520px;
+	margin: auto;
+}
+.clearfix{
+	clear: both;
+}
+.menu{
+	border: 1px solid black;
+	height: 590px;
+}
+.menu-contain{
+	border-bottom: 1px solid black;
+	height: 142px;
+}
+.menu-contain>h1{
+	float: right;
+	margin: 50px 12px;
+}
+.main-menu{
+	background: #33CCFF;
+}
+ul.menu-a{
+	list-style: none;
+	list-style-type: none;
+}
+ul.menu-a li{
+	display: inline-block;
+    border: 1px solid black;
+    width: 115px;
+    height: 77px;
+    margin: 5px;
+
+}
+button{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+ul.menu-a>li.menua{
+	width: 246px;
+}
+

@@ -1,0 +1,50 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: 'Open Sans', sans-serif;
+}
+.cfix{
+	clear: both;
+}
+.khung{
+	width: 20%;
+	margin: auto;
+	padding-right: 2px;
+	border: 2px solid #4CD4B0;
+	background: #FFFCE6;
+}
+.man-hinh{
+	width: 100%;
+	border: 1px solid #4CD4B0;
+}
+.man-hinh>input{
+	width: 100%;
+	border: none;
+	height: 40px;
+	line-height: 40px;
+	font-size: 30px;
+	color: #7D1424;
+}
+.man-hinh>input[id="dong2"]{
+	text-align: right;
+}
+.ban-phim{
+	width: 100%;
+	border: 1px solid #4CD4B0;
+}
+.ban-phim>button{
+	margin: 5px 1px 4px 4px;
+	width: 22%;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #4CD4B0;
+	background: rgba(76, 212, 176, 0.3);
+	color: #F24D16;
+}
+.ban-phim>button:hover{
+	border: 1px solid #f24d16;
+}
+.ban-phim>button[id="="]{
+	width: 47%;
+}

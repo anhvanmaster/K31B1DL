@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Máy tính</title>
+	<link rel="stylesheet" type="text/css" href="public/css/index.css">
+</head>
+<body>
+	<div class="home">
+		<section class="container">
+			<div class="menu container">
+				<div class="menu-contain">
+					<h1 id="kq">0</h1>
+				</div>
+
+				<div class="main-menu">
+					<ul class="menu-a">
+						<li><button onclick="nhannut('ac')">AC</button></li>
+						<li><button onclick="nhannut('+-')">+/_</button></li>
+						<li><button onclick="nhannut('%')">%</button></li>
+						<li><button id="phepCong" onclick="nhannut('+')">+</button></li>
+						<li><button onclick="nhannut(7)">7</button></li>
+						<li><button onclick="nhannut(8)">8</button></li>
+						<li><button onclick="nhannut(9)">9</button></li>
+						<li><button onclick="nhannut('-')">-</button></li>
+						<li><button onclick="nhannut(4)">4</button></li>
+						<li><button onclick="nhannut(5)">5</button></li>
+						<li><button onclick="nhannut(6)">6</button></li>
+						<li><button onclick="nhannut('x')">x</button></li>
+						<li><button onclick="nhannut(1)">1</button></li>
+						<li><button onclick="nhannut(2)">2</button></li>
+						<li><button onclick="nhannut(3)">3</button></li>
+						<li><button onclick="nhannut('/')">/</button></li>
+						<li><button onclick="nhannut(0)">0</button></li>
+						<li><button onclick="nhannut('.')">.</button></li>
+						<li class="menua"><button onclick="nhannut('=')">=</button></li>						
+					</ul>
+				</div>
+			</div>
+		</section>
+	
+	</div>
+	<script type="text/javascript">
+		var gtHienTai = "0";
+		var gtLuaChon = "0";
+		var phepToan = null;
+		var clear = false;
+		var kq = document.getElementById('kq');
+		function nhannut(giatri){
+			switch (giatri) {
+				case 'ac':
+					gtHienTai = "0";
+					gtLuaChon = "0";
+					phepToan = null;
+					kq.innerText = gtHienTai;
+					break;
+				case '+':
+					phepToan = "+";
+					
+					gtLuaChon = "0";
+					kq.innerText = gtLuaChon;
+					// document.getElementById('phepCong').style.border = "3px solid orange";
+					break;
+				case '-':
+					phepToan = "-";
+					
+					gtLuaChon = "0";
+					kq.innerText = gtLuaChon;
+					break;
+				case 'x':
+					phepToan = "x";
+					
+					gtLuaChon = "0";
+					kq.innerText = gtLuaChon;
+					break;
+				case '/':
+					phepToan = "/";
+					
+					gtLuaChon = "0";
+					kq.innerText = gtLuaChon;
+					break;
+				case '%':
+					gtHienTai = gtHienTai/100;
+					gtLuaChon = "0";
+					phepToan = null
+					kq.innerText = gtHienTai;
+					break;
+				case '+-':
+					// statements_1
+					break;
+				case '=':
+					if(phepToan == null) break;
+					if(phepToan === "+"){
+						gtHienTai = parseFloat(gtHienTai) + parseFloat(gtLuaChon);
+						kq.innerText = gtHienTai; 
+					}else if(phepToan === "-"){
+						gtHienTai = parseFloat(gtHienTai) - parseFloat(gtLuaChon);
+						kq.innerText = gtHienTai; 
+					}else if(phepToan === "x"){
+						gtHienTai = parseFloat(gtHienTai) * parseFloat(gtLuaChon);
+						kq.innerText = gtHienTai; 
+					}else if(phepToan === "/"){
+						gtHienTai = parseFloat(gtHienTai) / parseFloat(gtLuaChon);
+						kq.innerText = gtHienTai; 
+					}
+					phepToan = null;
+					clear = true;
+					break;
+				case '.':
+					debugger;
+					if(phepToan == null && !checkThapPhan(gtHienTai)){
+						gtHienTai += `.`;
+						kq.innerText = gtHienTai;
+						break;
+					}
+					
+					if(phepToan != null && !checkThapPhan(gtLuaChon)){
+						gtLuaChon += `.`;
+						kq.innerText = gtLuaChon;
+						
+					}
+					
+					break;
+				default:
+					if(phepToan == null){
+						if(checkThapPhan(gtHienTai)){
+							gtHienTai = `${gtHienTai}${giatri}`;
+							kq.innerText = gtHienTai;
+							break;
+						}
+						if(gtHienTai == 0 || clear == true){
+							gtHienTai = `${giatri}`;
+							clear = false;
+						}else{
+							gtHienTai = `${gtHienTai}${giatri}`;
+						}
+						kq.innerText = gtHienTai;
+					}else{
+						if(gtLuaChon == 0){
+							gtLuaChon = `${giatri}`;
+						}else{
+							gtLuaChon = `${gtLuaChon}${giatri}`;
+						}
+						kq.innerText = gtLuaChon;
+					}
+					break;
+			}
+		}
+
+
+		function checkThapPhan(str){
+			for (var i = 0; i < str.length; i++) {
+				if(str[i] === '.'){
+					return true;
+				}	
+			}
+			return false;
+		}
+	</script>
+		
+</body>
+</html>
