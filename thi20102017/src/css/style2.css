@@ -1,0 +1,74 @@
+/* begin định dạng chung css */
+*{margin:0;padding:0;font-family:sans-serif;}
+.ctn{width:1170px;margin:auto;}
+.clfix{clear: both;}
+img{width:100%;}
+/* end định dạng chung css */
+/* begin body */
+body{
+	position: relative;
+	background: #F3F3F3 url("../img/rem4.png") left top repeat-x;
+}
+/* .back-ground {
+	background: #F3F3F3 url("../img/html.png") left top repeat-x;
+} */
+.than{
+	margin-top: 50px;
+}
+.thiep{
+	width: 45%;
+	display: inline-block;
+}
+.chuc{
+	display: inline-block;
+	width: 25%;
+	float: right;
+	padding-top: 30px;
+	height: 675px;
+	padding-left: 10px;
+	border: 2px solid #5B6C84;
+	background: #fff;
+	color: #454547;
+	border-radius: 25px;
+}
+.logo img{
+	width: 498px;
+	height: 200px;
+}
+.tho{
+	position: relative;
+	display: inline-block;
+	width: 24%;
+	padding-left: 10px;
+	border: 2px solid #5B6C84;
+	background: #fff;
+	color: #454547;
+	border-radius: 25px;
+}
+.supper-mom{
+	width: 500px;
+	height: 500px;
+}
+.bong-bay{
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+section.fly{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+}
+.bay{
+	z-index: 0;
+	position: absolute;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+}
+.bay img{
+	width: 40px;
+}
+
+/* end body */

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>
+					<input type="checkbox" leader="1">
+				</th>
+				<th>
+					name
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<input type="checkbox" leader="0" name="">
+				</td>
+				<td>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" leader="0" name="">
+				</td>
+				<td>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" leader="0" name="">
+				</td>
+				<td>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" leader="0" name="">
+				</td>
+				<td>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" leader="0" name="">
+				</td>
+				<td>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+		var leader = document.querySelector('[leader="1"]');
+		var childs = document.querySelectorAll('[leader="0"]');
+		leader.addEventListener('click', function(){
+			for (var i = 0; i < childs.length; i++) {
+				childs[i].checked = leader.checked;
+			}
+		});
+		for (var i = 0; i < childs.length; i++) {
+				childs[i].addEventListener('click', function(){
+					var listChildChecked = document.querySelectorAll('[leader="0"]:checked');
+				leader.checked = listChildChecked.length == childs.length;
+				})
+			}
+	</script>
+</body>
+</html>

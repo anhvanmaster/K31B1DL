@@ -1,0 +1,24 @@
+/*
+Khắc Cường Blog - http://khaccuong.info
+Index mừng ngày của Mẹ - Design by Cường Nguyễn.All rights reserved
+*/
+html{background:#EBEDF2 url(html.png) left top repeat-x;border:0;margin:0;overflow:auto;padding:0}
+body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,code,del,dfn,em,img,q,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit;margin:0;padding:0;vertical-align:baseline}
+body{background:transparent url(body.jpg) 1em 3.125em no-repeat;line-height:1.5;margin:0 auto;max-width:56em;padding:5em 3em 0}
+article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block}
+table{border-collapse:separate;border-spacing:0}
+caption,th,td{float:none!important;font-weight:400;text-align:left}
+table,td,th{vertical-align:middle}
+blockquote:before,blockquote:after,q:before,q:after{content:""}
+a img{border:none}
+#site-header{margin-bottom:5px;min-height:400px;text-align:center}
+#site-header h1{background:transparent url(happy_mothers_day.png) center no-repeat;height:150px;margin:0 auto .625em;text-indent:-9999px;width:300px}
+section,#site-footer{border-top:1px solid #CFD1D5}
+section header,#site-footer .f{border-top:1px solid #FFF;position:relative;text-align:center}
+section header h1,#site-footer h1,#site-footer p{background-color:#EBEDF2;color:#777A7E;display:inline;font-size:1.3125em;font-style:italic;margin:0 auto;padding:0 1%;position:relative;top:-.65625em}
+#site-footer a{color:#f36;font-weight:700}
+#site-footer{text-align:center}
+a{color:#3B5998;cursor:pointer;text-decoration:none}
+#site-header h2{-moz-border-radius:5px;-o-border-radius:5px;-webkit-border-radius:5px;background:transparent url(project-article.png) left top repeat;border:1px solid #f36;border-radius:5px;color:#292D31;margin:0 auto;min-height:200px;overflow:hidden;padding:10px 10px 5px;position:relative;width:560px}
+.bt{clear:both;padding:15px}
+.bt a{-moz-border-radius:5px;-moz-transition:all .1s ease-in-out;-o-border-radius:5px;-webkit-border-radius:5px;-webkit-transition:all .2s ease-in-out;background:transparent url(project-article.png) left top repeat;border:1px solid #f36;border-radius:5px;color:#f36;font-family:Verdana,"Microsoft YaHei",TrebuchetMS,Arial,Verdana,Tahoma,sans-serif;font-size:13px;font-weight:700;line-height:30px;margin-left:15px;padding:10px 15px}

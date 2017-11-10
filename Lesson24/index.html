@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<p class="awesome" data-id="100">dong so 1</p>
+	<p class="awesome" data-id="100">dong so 1</p>
+	<p class="awesome" data-id="100">dong so 1</p>
+	<p class="awesome" data-id="100">dong so 1</p>
+	<button type="button" onclick="clickChuot()"> click me!</button>
+	<script type="text/javascript">
+		// var awesomeDom = document.querySelector('.awesome');
+		// console.log(awesomeDom);
+		function clickChuot(){
+			var awesomeDom = document.querySelectorAll('[data-id="100"]');
+			console.log(awesomeDom);
+		}
+		// var pTarget = document.getElementById('target');
+		// console.log(pTarget);
+		// pTarget.innerText = "HELLO WORLD!"; //pTarget.style.fontSize = '40px', pTarget.style.fontWeight = '900', pTarget.style.color = 'white', pTarget.style.background = 'black';
+		// pTarget.style = "font-size: 40px; font-weight:900; color: white; background: black";
+		// function removeP(){
+		// 	console.log('clicked');
+		// 	var listP = document.getElementsByTagName('p');
+		// 	for (var i = 0; i < listP.length; i++) {
+		// 		console.log(listP[i].attributes);
+		// 		if (listP[i].getAttribute('data-id') == '100') {
+		// 			listP[i].remove();
+		// 		}
+		// 	}
+		// 	console.log(listP);
+		// }
+	</script>
+</body>
+</html>
